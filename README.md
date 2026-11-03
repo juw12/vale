@@ -1,4 +1,55 @@
-# VALE
+<!-- HERO:START -->
+<p align="center">
+  <a href="https://juw12.github.io/vale/"><img src="docs/media/banner.jpg" alt="VALE: A 3D interactive fairy world." width="100%"></a>
+</p>
+
+<p align="center">
+  <b>A 3D interactive fairy world.</b><br>
+  A first-person explorer: collect five Lumenshards to restore a fading fairy realm.
+</p>
+
+<p align="center">
+  <a href="https://juw12.github.io/vale/"><b>Try it live</b></a> ·
+  <a href="#see-it-in-action">See it in action</a> ·
+  <a href="#highlights">Highlights</a> ·
+  <a href="https://github.com/juw12">More by juw12</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/juw12/vale"><img src="https://img.shields.io/github/last-commit/juw12/vale?label=updated&color=14b8a6" alt="Last updated"></a>
+  <a href="https://juw12.github.io/vale/"><img src="https://img.shields.io/badge/demo-live-2ea44f" alt="Live demo"></a>
+  <img src="https://img.shields.io/badge/Unity_6-24292f" alt="Unity 6">
+  <img src="https://img.shields.io/badge/HDRP-24292f" alt="HDRP">
+  <img src="https://img.shields.io/badge/Web_preview-24292f" alt="Web preview">
+</p>
+
+<a id="highlights"></a>
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <b>Explore</b><br>
+      First-person exploration of an ancient fairy realm.
+    </td>
+    <td width="33%" valign="top">
+      <b>Five Lumenshards</b><br>
+      Find them all to bring the light back.
+    </td>
+    <td width="33%" valign="top">
+      <b>Unity 6 + HDRP</b><br>
+      With an interactive HTML preview and five concept renders.
+    </td>
+  </tr>
+</table>
+
+## See it in action
+
+<p align="center">
+  <a href="https://juw12.github.io/vale/"><img src="preview/concept_art/01_vale_entrance.png" alt="VALE screenshot" width="820"></a><br>
+  <sub>Open the interactive demo at <a href="https://juw12.github.io/vale/">juw12.github.io/vale/</a></sub>
+</p>
+<!-- HERO:END -->
+
+## About
 
 You wake at the edge of an ancient fairy realm whose light is fading. The Fairy
 Elder asks you to recover five lost Lumenshards scattered across the Vale and
