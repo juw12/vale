@@ -1,0 +1,9 @@
+{
+  "appId": "io.github.juw12.vale",
+  "appName": "VALE",
+  "webDir": "www",
+  "backgroundColor": "#050d0a",
+  "android": {
+    "allowMixedContent": false
+  }
+}

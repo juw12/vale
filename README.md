@@ -49,6 +49,15 @@
 </p>
 <!-- HERO:END -->
 
+## Play on your phone
+
+The web version of VALE plays on Android phones and tablets with touch controls: tap **Talk**, tap the dialogue to continue, tap a shard on the map to collect it, then tap the Sacred Glade to place all five. Your progress saves on the device.
+
+- **Android app:** download [`VALE-android.apk`](https://github.com/juw12/vale/releases/download/android/VALE-android.apk) on your phone, open it, and allow your browser to install apps. It runs offline, full screen.
+- **No install:** open [juw12.github.io/vale](https://juw12.github.io/vale/) in Chrome and choose *Add to Home screen*.
+
+The Android app wraps the same `index.html` that GitHub Pages serves (Capacitor, built in `.github/workflows/android.yml`). The full Unity 6 + HDRP game below targets desktop: HDRP does not support mobile, so a native Unity Android build would need a URP port.
+
 ## About
 
 You wake at the edge of an ancient fairy realm whose light is fading. The Fairy
