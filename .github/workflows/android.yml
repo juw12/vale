@@ -53,7 +53,7 @@ jobs:
             echo "::warning::VALE_ANDROID_KEYSTORE_BASE64 is not set; only the debug APK will be built."
             exit 0
           fi
-          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/vale-signing.p12"
+          printf '%s' "$KEYSTORE_BASE64" | tr -d '\r\n ' | base64 -d > "$RUNNER_TEMP/vale-signing.p12"
           echo "VALE_ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/vale-signing.p12" >> "$GITHUB_ENV"
       - name: Build release and debug APKs
         env:
