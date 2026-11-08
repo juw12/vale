@@ -31,7 +31,7 @@
     --elder-gold:  #f5d76e;
     --leaf:        #4a8a5f;
     --moss:        #6fb38a;
-    --panel:       rgba(8, 18, 14, 0.78);
+    --panel:       #0b1a15;
     --panel-edge:  rgba(95, 224, 255, 0.32);
     --panel-edge-strong: rgba(95, 224, 255, 0.55);
     --danger:      #d97373;
@@ -169,16 +169,14 @@
     background: var(--panel);
     border: 1px solid var(--panel-edge);
     border-radius: 22px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     font-size: 13px;
     line-height: 1;
   }
   .hud .pill + .pill { margin-top: 10px; }
   .hud .label-mute {
     display: block;
-    font-size: 10px;
-    letter-spacing: 0.16em;
+    font-size: 12px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--ink-mute);
     margin-bottom: 6px;
@@ -207,7 +205,7 @@
 
   #hud-shards { top: 24px; left: 24px; }
   #hud-quest  { top: 24px; right: 24px; text-align: right; }
-  #hud-quest .pill { background: linear-gradient(135deg, rgba(8,18,14,0.85), rgba(8,18,14,0.7)); }
+
 
   /* ---------- Crosshair ---------- */
 
@@ -234,8 +232,6 @@
     background: var(--panel);
     border: 1px solid var(--panel-edge);
     border-radius: 22px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     color: var(--ink);
     font-size: 14px;
     z-index: 6;
@@ -264,8 +260,6 @@
     background: var(--panel);
     border: 1px solid var(--panel-edge-strong);
     border-radius: 14px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
     padding: 22px 28px 26px;
     z-index: 7;
     box-shadow: 0 12px 60px rgba(0,0,0,0.5), 0 0 30px rgba(95, 224, 255, 0.1);
@@ -298,7 +292,7 @@
   }
   #dialogue .portrait.keeper { background: radial-gradient(circle, var(--shard-cyan), rgba(95, 224, 255, 0.2) 70%, transparent); border-color: var(--shard-cyan); box-shadow: 0 0 18px rgba(95, 224, 255, 0.4); }
   #dialogue .name { font-family: var(--serif); font-size: 22px; letter-spacing: 0.02em; color: var(--ink); }
-  #dialogue .role { display: block; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-top: 2px; }
+  #dialogue .role { display: block; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-top: 2px; }
   #dialogue .body { font-family: var(--serif); font-size: 18px; line-height: 1.55; color: var(--ink); margin-bottom: 16px; min-height: 60px; }
   #dialogue .choices { display: flex; flex-direction: column; gap: 8px; }
   #dialogue .choices button {
@@ -321,8 +315,8 @@
   }
   #dialogue .continue {
     margin-top: 14px;
-    font-size: 11px;
-    letter-spacing: 0.18em;
+    font-size: 12px;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--ink-mute);
     text-align: right;
@@ -355,24 +349,22 @@
     background: var(--panel);
     border: 1px solid var(--panel-edge-strong);
     border-radius: 16px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 20px 80px rgba(0,0,0,0.6), 0 0 40px rgba(95, 224, 255, 0.12);
     padding: 32px 36px;
     width: min(680px, 90vw);
     max-height: 86vh;
     overflow-y: auto;
   }
-  .modal h1 {
+  .modal .modal-title {
     font-family: var(--serif);
     font-size: 32px;
     letter-spacing: 0.02em;
     color: var(--ink);
     margin-bottom: 4px;
   }
-  .modal h1 .accent { color: var(--shard-cyan); }
+  .modal .modal-title .accent { color: var(--shard-cyan); }
   .modal .sub {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--ink-mute);
@@ -396,8 +388,8 @@
     margin-left: 10px;
     padding: 2px 10px;
     font-family: var(--sans);
-    font-size: 10px;
-    letter-spacing: 0.14em;
+    font-size: 12px;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     border-radius: 12px;
     vertical-align: middle;
@@ -436,7 +428,7 @@
   #quest-log .reward b { color: var(--elder-gold); font-weight: 500; }
 
   /* Pause menu */
-  #pause h1 { text-align: center; margin-bottom: 8px; }
+  #pause .modal-title { text-align: center; margin-bottom: 8px; }
   #pause .sub { text-align: center; margin-bottom: 28px; }
   #pause .stack { display: flex; flex-direction: column; gap: 12px; align-items: center; }
   #pause button {
@@ -470,7 +462,7 @@
     color: var(--shard-glow);
     transform: scale(1.02);
   }
-  #pause .stack .key { display: inline-block; margin-left: 8px; font-family: var(--sans); font-size: 11px; color: var(--ink-mute); }
+  #pause .stack .key { display: inline-block; margin-left: 8px; font-family: var(--sans); font-size: 12px; color: var(--ink-mute); }
 
   /* ---------- Top-right control hints ---------- */
 
@@ -486,11 +478,11 @@
     padding: 2px 8px;
     border: 1px solid var(--panel-edge);
     border-radius: 4px;
-    font-size: 11px;
+    font-size: 12px;
     color: var(--shard-glow);
     background: var(--panel);
   }
-  #hints .hint { font-size: 11px; color: var(--ink-mute); }
+  #hints .hint { font-size: 12px; color: var(--ink-mute); }
 
   /* ---------- Title screen ---------- */
 
@@ -506,6 +498,7 @@
   }
   #title.fading { opacity: 0; pointer-events: none; }
   #title .logo {
+    font-weight: 400;
     font-family: var(--serif);
     font-size: clamp(64px, 12vw, 140px);
     letter-spacing: 0.18em;
@@ -540,17 +533,33 @@
   #title .credit {
     position: absolute;
     bottom: 20px;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--ink-fade);
+    color: var(--ink-mute);
   }
 
   /* ---------- Touch / phone ---------- */
 
   html, body { overscroll-behavior: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
   #scene-map .hit { fill: transparent; stroke: none; pointer-events: auto; cursor: pointer; }
-  #scene-map .node.shard.taken { fill: var(--shard-cyan); }
+  #scene-map .node.shard.taken { fill: var(--shard-cyan); opacity: 0.55; }
+  #scene-map .node.shard.next { stroke-width: 1.2; animation: mapPulse 2.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  #scene-map .node.glade.ready { stroke: var(--elder-gold); stroke-width: 1.2; }
+
+  /* Short feedback line (e.g. 'Talk to the Fairy Elder first') */
+  #toast {
+    position: absolute; left: 50%; top: 96px; transform: translate(-50%, -6px);
+    padding: 8px 16px; border-radius: 18px; z-index: 9;
+    background: #0c1d17; border: 1px solid var(--panel-edge-strong);
+    color: var(--ink); font-size: 14px; white-space: nowrap;
+    opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  #toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* Title screen: only the forest behind it, no HUD or map text bleeding through */
+  body.on-title #viewport .hud, body.on-title #prompt, body.on-title #touch-bar,
+  body.on-title #hints, body.on-title #scene-map, body.on-title #crosshair { visibility: hidden; }
   #prompt { pointer-events: auto; cursor: pointer; }
   #prompt .touch-only, #dialogue .touch-only, .touch-only { display: none; }
   #touch-bar { display: none; }
@@ -570,7 +579,7 @@
   }
   #title .resume-note { margin-top: 14px; font-size: 12px; letter-spacing: 0.08em; color: var(--ink-mute); min-height: 18px; }
   #finale .stack { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 8px; }
-  #finale h1, #finale .sub, #finale p { text-align: center; }
+  #finale .modal-title, #finale .sub, #finale p { text-align: center; }
 
   @media (hover: none), (pointer: coarse) {
     .key-only, #hints, #pause .stack .key { display: none !important; }
@@ -597,8 +606,6 @@
       font-family: var(--sans);
       font-size: 13px;
       letter-spacing: 0.06em;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
     }
     #touch-bar button:active { background: rgba(95, 224, 255, 0.18); border-color: var(--panel-edge-strong); }
     #touch-bar button[disabled] { opacity: 0.4; }
@@ -634,7 +641,7 @@
   }
 </style>
 </head>
-<body>
+<body class="on-title">
 
 <!-- ============================================================
      Scene viewport
@@ -658,55 +665,51 @@
       <circle class="ring" cx="50" cy="50" r="36" opacity="0.22"/>
       <circle class="ring" cx="50" cy="50" r="14" opacity="0.18"/>
 
-      <!-- Forest path connecting shards -->
-      <path class="path" d="M50 50 L24 30 L72 26 L78 60 L40 80 Z"/>
-      <path class="path" d="M50 50 L24 30"/>
+      <!-- Quest route: Elder, shards 1 to 5, then the Sacred Glade -->
+      <path class="path" d="M68 86 L24 30 L72 26 L78 60 L40 80 L14 62 L50 50"/>
 
       <!-- Sacred Glade (center) -->
       <g class="pulse">
         <circle class="node glade" cx="50" cy="50" r="6"/>
-        <text class="label" x="50" y="50" fill="rgba(184,243,255,0.9)">Sacred</text>
-        <text class="label" x="50" y="55" fill="rgba(184,243,255,0.9)">Glade</text>
       </g>
+      <text class="label" x="50" y="60">Sacred Glade</text>
 
       <!-- Fairy Elder (entrance) -->
       <g>
         <circle class="node elder" cx="68" cy="86" r="2.5"/>
-        <text class="label" x="68" y="91">Fairy Elder</text>
-        <text class="label-mute" x="68" y="94">Vale entrance</text>
+        <text class="label" x="68" y="92">Fairy Elder</text>
+        <text class="label-mute" x="68" y="95.5">Vale entrance</text>
       </g>
 
-      <!-- Lumenshards (5) -->
+      <!-- Lumenshards (5): name above, place below -->
       <g>
-        <circle class="node shard pulse" cx="24" cy="30" r="1.8"/>
+        <circle class="node shard" data-shard="1" cx="24" cy="30" r="1.8"/>
         <text class="label" x="24" y="25">Shard 1</text>
-        <text class="label-mute" x="24" y="22">North clearing</text>
+        <text class="label-mute" x="24" y="35.5">North clearing</text>
       </g>
       <g>
-        <circle class="node shard pulse" cx="72" cy="26" r="1.8"/>
+        <circle class="node shard" data-shard="2" cx="72" cy="26" r="1.8"/>
         <text class="label" x="72" y="21">Shard 2</text>
-        <text class="label-mute" x="72" y="18">East stream</text>
+        <text class="label-mute" x="72" y="31.5">East stream</text>
       </g>
       <g>
-        <circle class="node shard pulse" cx="78" cy="60" r="1.8"/>
-        <text class="label" x="80" y="60">Shard 3</text>
-        <text class="label-mute" x="80" y="63">South mushroom grove</text>
+        <circle class="node shard" data-shard="3" cx="78" cy="60" r="1.8"/>
+        <text class="label" x="78" y="55">Shard 3</text>
+        <text class="label-mute" x="78" y="65.5">Mushroom grove</text>
       </g>
       <g>
-        <circle class="node shard pulse" cx="40" cy="80" r="1.8"/>
-        <text class="label" x="40" y="86">Shard 4</text>
-        <text class="label-mute" x="40" y="89">West ruins</text>
+        <circle class="node shard" data-shard="4" cx="40" cy="80" r="1.8"/>
+        <text class="label" x="40" y="75">Shard 4</text>
+        <text class="label-mute" x="40" y="85.5">West ruins</text>
       </g>
       <g>
-        <circle class="node shard pulse" cx="14" cy="62" r="1.8"/>
-        <text class="label" x="14" y="58">Shard 5</text>
-        <text class="label-mute" x="14" y="55">Heart pool</text>
+        <circle class="node shard" data-shard="5" cx="14" cy="62" r="1.8"/>
+        <text class="label" x="14" y="57">Shard 5</text>
+        <text class="label-mute" x="14" y="67.5">Heart pool</text>
       </g>
 
       <!-- Compass -->
-      <g transform="translate(94, 6)">
-        <text class="label-mute" text-anchor="middle" y="0">N</text>
-      </g>
+      <text class="label-mute" x="50" y="2.5">N</text>
     </svg>
   </div>
 
@@ -739,6 +742,9 @@
       </div>
     </div>
   </div>
+
+  <!-- Short feedback line -->
+  <div id="toast" role="status" aria-live="polite"></div>
 
   <!-- Crosshair -->
   <div id="crosshair"></div>
@@ -780,7 +786,7 @@
 
 <div id="quest-log-veil" class="modal-veil">
   <div id="quest-log" class="modal">
-    <h1>Quest <span class="accent">Log</span></h1>
+    <h2 class="modal-title">Quest <span class="accent">Log</span></h2>
     <div class="sub"><span class="key-only">Press Tab to close</span><span class="touch-only">Tap outside to close</span></div>
 
     <div class="section">
@@ -788,11 +794,11 @@
       <p>The Fairy Elder asked you to recover the five lost Lumenshards scattered across the Vale and bring them to the Sacred Glade.</p>
       <ol>
         <li class="done">Talk to the Fairy Elder at the Vale's entrance</li>
-        <li class="active" id="obj-2">Collect Lumenshard 1 — North clearing</li>
-        <li>Collect Lumenshard 2 — East stream</li>
-        <li>Collect Lumenshard 3 — South mushroom grove</li>
-        <li>Collect Lumenshard 4 — West ruins</li>
-        <li>Collect Lumenshard 5 — Heart pool</li>
+        <li class="active" id="obj-2">Collect Lumenshard 1: North clearing</li>
+        <li>Collect Lumenshard 2: East stream</li>
+        <li>Collect Lumenshard 3: Mushroom grove</li>
+        <li>Collect Lumenshard 4: West ruins</li>
+        <li>Collect Lumenshard 5: Heart pool</li>
       </ol>
       <div class="reward"><b>Reward:</b> Opens the Sacred Glade and reveals the path to the altar.</div>
     </div>
@@ -810,7 +816,7 @@
 
 <div id="pause-veil" class="modal-veil">
   <div id="pause" class="modal">
-    <h1>Vale</h1>
+    <h2 class="modal-title">Vale</h2>
     <div class="sub">A moment of stillness</div>
     <div class="stack">
       <button onclick="resume()">Resume<span class="key">Esc</span></button>
@@ -822,7 +828,7 @@
 
 <div id="finale-veil" class="modal-veil">
   <div id="finale" class="modal">
-    <h1>The <span class="accent">light</span> returns</h1>
+    <h2 class="modal-title">The <span class="accent">light</span> returns</h2>
     <div class="sub">Restore the Sacred Glade &middot; Complete</div>
     <p>You set the five Lumenshards on the altar. One by one they wake, and the Vale remembers itself: the streams sing again, and the canopy glows.</p>
     <div class="stack">
@@ -836,7 +842,7 @@
      ============================================================ -->
 
 <div id="title">
-  <div class="logo">VALE</div>
+  <h1 class="logo">VALE</h1>
   <div class="tag">A first-person fairy explorer</div>
   <button id="begin-btn" onclick="beginGame()">Begin</button>
   <div class="resume-note" id="resume-note"></div>
@@ -880,7 +886,7 @@ const dialogue = {
       },
       {
         id: "elder_accept",
-        text: "Then go with the light. Begin in the north — Keeper Maris watches over the first shard.",
+        text: "Then go with the light. Begin in the north. Keeper Maris watches over the first shard.",
         next: null
       },
       {
@@ -912,7 +918,7 @@ const dialogue = {
       },
       {
         id: "keeper_maris_3",
-        text: "And if you meet the others — say that Maris remembers them.",
+        text: "And if you meet the others, say that Maris remembers them.",
         choices: [
           { label: "I will.", next: null }
         ]
@@ -964,6 +970,7 @@ function beginGame() {
     document.getElementById("title").style.display = "none";
   }, 800);
   state = "EXPLORING";
+  document.body.classList.remove("on-title");
   const saved = loadSave();
   if (saved) {
     elderMet = !!saved.elderMet;
@@ -1129,6 +1136,17 @@ function quit() {
 function collectShard(n, restoring) {
   if (shardsCollected >= 5) return;
   if (n <= shardsCollected) return;
+  if (!restoring) {
+    if (state !== "EXPLORING") return;
+    if (!elderMet) {
+      showToast("Talk to the Fairy Elder first");
+      return;
+    }
+    if (n !== shardsCollected + 1) {
+      showToast("Find Shard " + (shardsCollected + 1) + " first");
+      return;
+    }
+  }
   shardsCollected = n;
   document.querySelectorAll("#scene-map .node.shard").forEach((node, i) => {
     node.classList.toggle("taken", i < n);
@@ -1145,21 +1163,13 @@ function collectShard(n, restoring) {
     obj.classList.add("done");
   }
 
-  // Update HUD objective text.
-  const next = n + 1;
-  if (next <= 5) {
-    document.getElementById("quest-objective").textContent = "Collect Lumenshard " + next;
-  } else {
-    document.getElementById("quest-objective").textContent = "Return to the Sacred Glade";
-  }
-
-  // Simulate shard-place on completion.
+  // Quest log badges once all five are found; HUD text comes from refreshGuidance().
   if (n === 5) {
     document.querySelectorAll("#quest-log .section")[0].querySelector(".badge").className = "badge complete";
     document.querySelectorAll("#quest-log .section")[1].querySelector(".badge").className = "badge active";
-    document.getElementById("quest-objective").textContent = "Place shards on the altar";
     if (state === "EXPLORING") hidePrompt();
   }
+  refreshGuidance();
 }
 
 /* ----------------------------------------------------------
@@ -1225,7 +1235,36 @@ function talkTarget() {
   return null;
 }
 
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => toast.classList.remove("show"), 1800);
+}
+
+const isTouch = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+
+function refreshGuidance() {
+  const next = shardsCollected + 1;
+  document.querySelectorAll("#scene-map .node.shard").forEach((node, i) => {
+    node.classList.toggle("next", elderMet && i + 1 === next);
+  });
+  document.querySelector("#scene-map .node.glade").classList.toggle("ready", shardsCollected >= 5);
+  const objective = document.getElementById("quest-objective");
+  const verb = isTouch ? "Tap" : "Click";
+  if (state === "FINALE") return;
+  if (!elderMet) {
+    objective.textContent = "Talk to the Fairy Elder";
+  } else if (next <= 5) {
+    objective.textContent = verb + " Shard " + next + " on the map";
+  } else {
+    objective.textContent = verb + " the Sacred Glade to place the shards";
+  }
+}
+
 function refreshPrompt() {
+  refreshGuidance();
   const target = talkTarget();
   const talkBtn = document.getElementById("talk-btn");
   if (talkBtn) talkBtn.disabled = !target;
@@ -1272,7 +1311,11 @@ function startOver() {
 }
 
 function placeShards() {
-  if (state !== "EXPLORING" || shardsCollected < 5) return;
+  if (state !== "EXPLORING") return;
+  if (shardsCollected < 5) {
+    showToast("The altar needs all five Lumenshards");
+    return;
+  }
   state = "FINALE";
   hidePrompt();
   document.getElementById("quest-objective").textContent = "The Vale is restored";
