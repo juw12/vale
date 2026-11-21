@@ -54,7 +54,15 @@
 The web version of VALE plays on Android phones and tablets with touch controls: tap **Talk**, tap the dialogue to continue, tap a shard on the map to collect it, then tap the Sacred Glade to place all five. Your progress saves on the device.
 
 - **Android app:** download [`VALE-android.apk`](https://github.com/juw12/vale/releases/download/android/VALE-android.apk) on your phone, open it, and allow your browser to install apps. It runs offline, full screen.
-- **No install:** open [juw12.github.io/vale](https://juw12.github.io/vale/) in Chrome and choose *Add to Home screen*.
+- **iPhone / iPad:** open [juw12.github.io/vale](https://juw12.github.io/vale/) in Safari, tap Share, then *Add to Home Screen*.
+- **Android, no install:** open [juw12.github.io/vale](https://juw12.github.io/vale/) in Chrome and choose *Add to Home screen*.
+
+## Play on your computer
+
+The same web version in its own window ([`desktop/`](desktop/README.md)); your progress stays on the computer.
+
+- **Windows:** download [`VALE-Windows-Setup.exe`](https://github.com/juw12/vale/releases/download/desktop/VALE-Windows-Setup.exe) and open it (no admin needed; if Windows says it protected your PC, choose *More info → Run anyway*). Without installing: [`VALE-Windows-Portable.zip`](https://github.com/juw12/vale/releases/download/desktop/VALE-Windows-Portable.zip).
+- **Mac:** download [`VALE-macOS-AppleSilicon.dmg`](https://github.com/juw12/vale/releases/download/desktop/VALE-macOS-AppleSilicon.dmg) (M1 and newer) or [`VALE-macOS-Intel.dmg`](https://github.com/juw12/vale/releases/download/desktop/VALE-macOS-Intel.dmg), open it and drag VALE to Applications. The first time, macOS blocks it because it is not notarized: **System Settings → Privacy & Security → Open Anyway**.
 
 The Android app wraps the same `index.html` that GitHub Pages serves (Capacitor, built in `.github/workflows/android.yml`). The full Unity 6 + HDRP game below targets desktop: HDRP does not support mobile, so a native Unity Android build would need a URP port.
 
